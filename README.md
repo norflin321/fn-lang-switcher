@@ -35,3 +35,7 @@ Create fn-lang-switcher.py file in ~/.
 
     with keyboard.Listener(on_press=on_press, on_release=None) as listener:
         listener.join()
+        
+Then run this python3 script on log in
+------------
+https://stackoverflow.com/a/9523030/16259768
