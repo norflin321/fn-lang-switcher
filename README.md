@@ -40,6 +40,6 @@ Set this to "Do Nothing"
 ------------
 ![ezgif-5-aeb126ae5e](https://user-images.githubusercontent.com/33498670/167285047-18f7a509-b56d-4f1f-896a-963c034947dc.jpeg)
 
-Then run this python3 script on log in
+Then run this script on log in (python3 should be installed)
 ------------
 https://stackoverflow.com/a/9523030/16259768
