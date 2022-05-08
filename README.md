@@ -44,3 +44,8 @@ Set this to "Do Nothing"
 Then run this script on log in (python3 should be installed)
 ------------
 https://stackoverflow.com/a/9523030/16259768
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+# RESULT:
+You can toggle input source with "fn" button, but without showing the pop up!
+
