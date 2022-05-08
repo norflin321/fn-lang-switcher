@@ -14,6 +14,3 @@ def on_press(key):
 
 with keyboard.Listener(on_press=on_press, on_release=None) as listener:
     listener.join()
-
-# listener = keyboard.Listener(on_press=on_press, on_release=None)
-# listener.start()
