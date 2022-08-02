@@ -6,7 +6,7 @@ Not only its slow, but when mouse cursor happens to be in the center of the scre
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 # THE SOLUTION (get rid of the pop up):
 
-Install "issw" a small utility for macos to switch input sources from a command line.
+Install ["issw"](https://github.com/vovkasm/input-source-switcher) a small utility for macos to switch input sources from a command line.
 ------------
 
     git clone https://github.com/norflin321/input-source-switcher.git
