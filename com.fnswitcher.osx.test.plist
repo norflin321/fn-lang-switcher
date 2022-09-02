@@ -5,7 +5,7 @@
     <key>Label</key>
     <string>com.fnswitcher.osx.test</string>
     <key>Program</key>
-    <string>~/main/other/fn-lang-switcher/fn.py</string>
+    <string>/Users/norflin/main/other/fn-lang-switcher/fn.py</string>
     <key>KeepAlive</key>
     <true/>
   </dict>
