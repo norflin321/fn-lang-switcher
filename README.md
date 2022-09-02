@@ -16,7 +16,7 @@ Install ["issw"](https://github.com/vovkasm/input-source-switcher) a small utili
     make
     make install
 
-Create fn-lang-switcher.py file in ~/.
+Create fn.py file in ~/. Or clone repo.
 ------------
 
     import os
@@ -43,10 +43,10 @@ Set this to "Do Nothing"
 
 Setup auto run of the script every time you log in (python3 should be installed)
 ------------
-1. Inside clonned repository, run this terminal command on python script file `chmod u+x fn.py`, to make it an executable.
-2. Change path to the python script file inside `com.fnswitcher.osx.test.plist` file. Mine is `/Users/norflin/main/other/fn-lang-switcher/fn.py` (path should be full).
-3. Run this command `sudo cp com.fnswitcher.osx.test.plist /Library/LaunchAgents/` - it will copy plit file to special directory.
-4. Run this command `launchctl load /Library/LaunchAgents/com.fnswitcher.osx.test.plist` - it will tell mac to run this file every time you log in. If you want to stop it run `launchctl unload /Library/LaunchAgents/com.fnswitcher.osx.test.plist`.
+`chmod u+x fn.py`
+1. Change paths to the python executable and this script file inside `fn.plist`. Mine is `/Users/norflin/miniforge3/bin/python` and `/Users/norflin/fn.py` (paths should be full).
+2. Run this command: `cp fn.plist ~/Library/LaunchAgents/` - it will copy plist file to special directory.
+3. Then run this command: `launchctl load ~/Library/LaunchAgents/fn.plist` - it will tell mac to run this file every time you log in. If you want to stop it run `launchctl load ~/Library/LaunchAgents/fn.plist`.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 # RESULT:
