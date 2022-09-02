@@ -35,7 +35,7 @@ Create fn-lang-switcher.py file in ~/.
 
     with keyboard.Listener(on_press=on_press, on_release=None) as listener:
         listener.join()
-"<179>" is key code for "fn", run "issw -l" in terminal to get list of available input sources, modify script above if needed
+`<179>` is key code for `fn`, run `issw -l` in terminal to get list of available input sources, modify script above if needed
 
 Set this to "Do Nothing"
 ------------
