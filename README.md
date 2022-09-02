@@ -44,7 +44,7 @@ Set this to "Do Nothing"
 Setup auto run the script on log in (python3 should be installed)
 ------------
 1. Inside clonned repository, run this terminal command `chmod u+x fn.py`.
-2. Change path to the python script inside `com.fnswitcher.osx.test.plist` file. Mine is `~/main/other/fn-lang-switcher/fn.py`.
+2. Change path to the python script inside `com.fnswitcher.osx.test.plist` file. Mine is `/Users/norflin/main/other/fn-lang-switcher/fn.py`. Path should be full.
 3. Run this command `sudo cp com.fnswitcher.osx.test.plist /Library/LaunchAgents/`.
 4. Run this command `launchctl load /Library/LaunchAgents/com.fnswitcher.osx.test.plist` - it will tell mac to run this file every time you log in. If you want to stop it run `launchctl unload /Library/LaunchAgents/com.fnswitcher.osx.test.plist`.
 
