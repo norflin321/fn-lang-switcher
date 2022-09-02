@@ -41,9 +41,11 @@ Set this to "Do Nothing"
 ------------
 ![ezgif-5-aeb126ae5e](https://user-images.githubusercontent.com/33498670/167285047-18f7a509-b56d-4f1f-896a-963c034947dc.jpeg)
 
-Then run this script on log in (python3 should be installed)
+Setup auto run the script on log in (python3 should be installed)
 ------------
-https://stackoverflow.com/a/9523030/16259768
+1. Inside clonned repository, run this terminal command `chmod u+x fn.py`.
+2. Change path to the python script inside `com.fnswitcher.osx.test.plist` file. Mine is `~/main/other/fn-lang-switcher/fn.py`.
+3. Run this command `sudo cp com.fnswitcher.osx.test.plist /Library/LaunchAgents`.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 # RESULT:
