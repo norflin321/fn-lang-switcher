@@ -43,10 +43,11 @@ Set this to "Do Nothing"
 
 Setup auto run of the script every time you log in (python3 should be installed)
 ------------
-`chmod u+x fn.py`
-1. Change paths to the python executable and this script file inside `fn.plist`. Mine is `/Users/norflin/miniforge3/bin/python` and `/Users/norflin/fn.py` (paths should be full).
-2. Run this command: `cp fn.plist ~/Library/LaunchAgents/` - it will copy plist file to special directory.
-3. Then run this command: `launchctl load ~/Library/LaunchAgents/fn.plist` - it will tell mac to run this file every time you log in. If you want to stop it run `launchctl load ~/Library/LaunchAgents/fn.plist` and remove the file `rm -rf ~/Library/LaunchAgents/fn.plist`.
+1. Inside `fn.plist` file, change paths to the python executable and the script file. Mine is `/Users/norflin/miniforge3/bin/python` (you can check it with `which python`) and `/Users/norflin/fn.py`. Paths should be full.
+2. Copy the plist file to special directory: `cp -R fn.plist ~/Library/LaunchAgents/`.
+3. Then run this command: `launchctl load ~/Library/LaunchAgents/fn.plist` - it will tell mac to run this file every time you log in. If you want to stop it run `launchctl unload ~/Library/LaunchAgents/fn.plist` and remove the file `rm -rf ~/Library/LaunchAgents/fn.plist`.
+4. Mac might ask you to grant permission for python to monitor input from your keyboard.
+5. Restart. Log in. It should work.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 # RESULT:
