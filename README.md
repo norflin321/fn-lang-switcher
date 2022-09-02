@@ -16,7 +16,7 @@ Install ["issw"](https://github.com/vovkasm/input-source-switcher) a small utili
     make
     make install
 
-Create fn.py file in ~/. Or clone repo.
+Create fn.py file in ~/. Or clone the repository.
 ------------
 
     import os
