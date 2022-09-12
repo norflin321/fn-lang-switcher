@@ -16,7 +16,9 @@ Install ["issw"](https://github.com/vovkasm/input-source-switcher) a small utili
     make
     make install
 
-Create fn.py file in ~/. Or clone the repository.
+By default executable will be installed as `/usr/local/bin/issw`
+
+Create fn.py file in ~/. Or clone the repository. 
 ------------
 
     import os
@@ -25,17 +27,17 @@ Create fn.py file in ~/. Or clone the repository.
     def on_press(key):
         key_str = '{0}'.format(key)
         if (key_str == '<179>'):
-            stream = os.popen('issw')
-            output = stream.read().strip()
+            stream = os.popen('/usr/local/bin/issw')
+            output = stream.read().strip() 
             if (output == 'com.apple.keylayout.ABC'):
-                os.system('issw com.apple.keylayout.Russian')
+                os.system('/usr/local/bin/issw com.apple.keylayout.Russian')
             else:
-                os.system('issw com.apple.keylayout.ABC')
+                os.system('/usr/local/bin/issw com.apple.keylayout.ABC')
 
 
     with keyboard.Listener(on_press=on_press, on_release=None) as listener:
         listener.join()
-`<179>` is key code for `fn`, run `issw -l` in terminal to get list of available input sources, modify script above if needed
+`<179>` is key code for `fn`. Don't forget to run `issw -l` in terminal to get list of available input sources and modify script above if needed!
 
 Set this to "Do Nothing"
 ------------
@@ -43,11 +45,17 @@ Set this to "Do Nothing"
 
 Setup auto run of the script every time you log in (python3 should be installed)
 ------------
-1. Inside `fn.plist` file, change paths to the python executable and the script file. Mine is `/Users/norflin/miniforge3/bin/python` (you can check it with `which python`) and `/Users/norflin/fn.py`. Paths should be full.
-2. Copy the plist file to special directory: `cp -R fn.plist ~/Library/LaunchAgents/`.
-3. Then run this command: `launchctl load ~/Library/LaunchAgents/fn.plist` - it will tell mac to run this file every time you log in. If you want to stop it run `launchctl unload ~/Library/LaunchAgents/fn.plist` and remove the file `rm -rf ~/Library/LaunchAgents/fn.plist`.
-4. Mac might ask you to grant permission for python to monitor input from your keyboard.
-5. Restart. Log in. It should work.
+1. Install `pynput` python module:
+    `/usr/bin/python3 -m pip install pynput`
+or, if you are using your own python installation:
+    `/your/python3/executable/path -m pip install pynput`
+2. Inside `fn.plist` file, change paths to the python executable (if you are using custom python installation) and the script file. Mine is `/Users/norflin/fn.py`. Paths should be full.
+3. Copy the plist file to special directory: `cp -R fn.plist ~/Library/LaunchAgents/`.
+4. Then run this command: `launchctl load ~/Library/LaunchAgents/fn.plist` - it will tell mac to run this file every time you log in. If you want to stop it run `launchctl unload ~/Library/LaunchAgents/fn.plist` and remove the file `rm -rf ~/Library/LaunchAgents/fn.plist`.
+5. Mac might ask you to grant permission for python to monitor input from your keyboard and `Accessibility`. Generally macOS asking about `Input Monitoring`, add your python3 executable to `Accessibility` if no popup with this showed.
+6. Restart. Log in. It should work.
+
+P.S. Don't forget to reinstall `pynput` after upgrades.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 # RESULT:

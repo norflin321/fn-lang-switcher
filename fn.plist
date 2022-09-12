@@ -6,7 +6,7 @@
     <string>fn.py</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/norflin/miniforge3/bin/python</string>
+        <string>/usr/bin/python3</string>
         <string>/Users/norflin/fn.py</string>
     </array>
     <key>KeepAlive</key>
