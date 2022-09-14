@@ -43,7 +43,7 @@ Set this to "Do Nothing"
 ------------
 ![ezgif-5-aeb126ae5e](https://user-images.githubusercontent.com/33498670/167285047-18f7a509-b56d-4f1f-896a-963c034947dc.jpeg)
 
-Setup auto run of the script every time you log in (python3 should be installed)
+Setup auto run of the script every time you log in (python3 should be installed).
 ------------
 1. Install `pynput` python module:
     `/usr/bin/python3 -m pip install pynput`
@@ -55,7 +55,7 @@ or, if you are using your own python installation:
 5. Mac might ask you to grant permission for python to monitor input from your keyboard and `Accessibility`. Generally macOS asking about `Input Monitoring`, add your python3 executable to `Accessibility` if no popup with this showed.
 6. Restart. Log in. It should work.
 
-P.S. Don't forget to reinstall `pynput` after upgrades.
+P.S. Don't forget to reinstall `pynput` after upgrades. Also see [issue #2](https://github.com/norflin321/fn-lang-switcher/issues/2).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 # RESULT:
