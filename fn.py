@@ -1,4 +1,4 @@
-import os
+import subprocess
 
 from pynput import keyboard
 
@@ -11,20 +11,20 @@ def on_press(inputs: list[str]):
         # "<179>" is fn-key
         if str(key) != "<179>":
             return
-        stream = os.popen(ISSW)
-        output = stream.read().strip()
+        subp = subprocess.run(ISSW, capture_output=True, text=True)
+        output = subp.stdout.strip()
         current_input_index = inputs.index(output)
         next_index = (current_input_index + 1) % len(inputs)
         next_input = inputs[next_index]
-        os.popen(f"{ISSW} {next_input}")
+        subprocess.run([ISSW, next_input], capture_output=True)
 
     print(f"Current inputs: [{', '.join(inputs)}]")
     return handler
 
 
 def list_inputs():
-    stream = os.popen(f"{ISSW} -l")
-    outputs = stream.read().strip().split("\n")
+    subp = subprocess.run([ISSW, "-l"], capture_output=True, text=True)
+    outputs = subp.stdout.strip().split("\n")
     inputs = [line for line in outputs if line.startswith(COM_APPLE_KEYLAYOUT)]
     return inputs
 
