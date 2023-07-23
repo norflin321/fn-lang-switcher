@@ -14,5 +14,6 @@ def on_press(key):
             os.system("/usr/local/bin/issw com.apple.keylayout.ABC")
 
 
-with keyboard.Listener(on_press=on_press, on_release=None) as listener:
-    listener.join()
+if __name__ == "__main__":
+    with keyboard.Listener(on_press=on_press, on_release=None) as listener:
+        listener.join()
