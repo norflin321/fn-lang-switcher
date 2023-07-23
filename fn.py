@@ -2,6 +2,8 @@ import os
 
 from pynput import keyboard
 
+COM_APPLE_KEYLAYOUT = "com.apple.keylayout"
+
 
 def on_press(key):
     # "<179>" is fn-key
@@ -13,6 +15,13 @@ def on_press(key):
         os.system("/usr/local/bin/issw com.apple.keylayout.Russian")
     else:
         os.system("/usr/local/bin/issw com.apple.keylayout.ABC")
+
+
+def list_inputs():
+    stream = os.popen("/usr/local/bin/issw -l")
+    outputs = stream.read().strip().split("\n")
+    inputs = [line for line in outputs if line.startswith(COM_APPLE_KEYLAYOUT)]
+    return inputs
 
 
 if __name__ == "__main__":
