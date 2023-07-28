@@ -3,11 +3,12 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>fn.py</string>
+    <string>fn lang switcher</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/bin/python3</string>
-        <string>/Users/norflin/fn.py</string>
+        <string>zsh</string>
+        <string>-c</string>
+        <string>python3 -m pip install pynput; python3 ~/Library/LaunchAgents/fn_lang_switcher/fn.py</string>
     </array>
     <key>KeepAlive</key>
     <true/>
