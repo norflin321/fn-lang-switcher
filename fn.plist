@@ -2,14 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Disabled</key>
+	<false/>
     <key>Label</key>
-    <string>fn lang switcher</string>
+    <string>fn.py</string>
     <key>ProgramArguments</key>
     <array>
-        <string>zsh</string>
+		<string>zsh</string>
         <string>-c</string>
-        <string>python3 -m pip install pynput; python3 ~/Library/LaunchAgents/fn_lang_switcher/fn.py</string>
+        <string>python3 ~/Library/LaunchAgents/fn_lang_switcher/fn.py</string>
     </array>
+	<key>StandardErrorPath</key>
+	<string>~/Library/LaunchAgents/fn_lang_switcher/fn.error</string>
+	<key>RunAtLoad</key>
+	<true/>
     <key>KeepAlive</key>
     <true/>
 </dict>
